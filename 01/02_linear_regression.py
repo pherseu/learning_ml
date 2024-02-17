@@ -25,7 +25,7 @@ def train(X, Y, iterations, lr):
         
     raise Exception("Couldn't converge within %d iterations" % iterations)
 
-X, Y = np.loadtxt('01\pizza.txt', skiprows=1, unpack=True)
+X, Y = np.loadtxt('01\datasets\pizza.txt', skiprows=1, unpack=True)
 
 w, b = train(X, Y, iterations=10000, lr=0.01)
 print("\nw=%.3f, b=%.3f" % (w, b))

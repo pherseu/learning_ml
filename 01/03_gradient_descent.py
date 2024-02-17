@@ -20,7 +20,7 @@ def train(X, Y, iterations, lr):
         b -= b_gradient * lr
     return w, b
 
-X, Y = np.loadtxt("01/pizza.txt", skiprows=1, unpack=True)
+X, Y = np.loadtxt("01\datasets\pizza.txt", skiprows=1, unpack=True)
 w, b = train(X, Y, iterations=20000, lr=0.001)
 print("\nw=%.10f, b=%.10f" % (w, b))
 print("Prediction: x=%d => y=%.2f" % (20, predict(20, w, b)))

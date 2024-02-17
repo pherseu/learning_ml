@@ -16,7 +16,7 @@ def train(X, Y, iterations, lr):
         w -= gradient(X, Y, w) * lr
     return w
 
-x1, x2, x3, y = np.loadtxt("./01/pizza2.txt", skiprows = 1, unpack = True)
+x1, x2, x3, y = np.loadtxt("./01/datasets/pizza2.txt", skiprows = 1, unpack = True)
 X = np.column_stack((np.ones(x1.size), x1, x2, x3))
 Y = y.reshape(-1,1)
 w = train(X, Y, iterations=100000, lr=0.001)

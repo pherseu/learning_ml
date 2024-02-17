@@ -38,7 +38,7 @@ def test(X, Y, w):
     success_percent = correct_results * 100 / total_examples
     print("\nSuccess: %d/%d (%.2f%%)" % (correct_results, total_examples, success_percent))
 
-x1, x2, x3, y = np.loadtxt("./01/police.txt", skiprows=1, unpack=True)
+x1, x2, x3, y = np.loadtxt("./01/datasets/police.txt", skiprows=1, unpack=True)
 X = np.column_stack((np.ones(x1.size), x1, x2, x3))
 Y = y.reshape(-1,1)
 w = train(X, Y, iterations=10000, lr=0.001)
