@@ -1,0 +1,16 @@
+> Apart from the hyperparameters, you shouldn’t need to change any code in the classifier itself. You should only have to replace the code that loads and prepares data.
+
+> The Sonar dataset includes 208 examples. It will be up to you to split them into a training and a test set. I set aside 48 examples for testing.
+
+> The examples in the Sonar dataset are ordered: all the rocks first, followed by all the mines. You’ll have to shuffle them before you split them, if you don’t want to end up with a test set that only includes examples of a
+single class.
+
+> Remember to add a bias column to both X_train and X_test.
+
+> Remember to one-hot encode Y_train, but not Y_test.
+
+> Try a learning rate of 0.01 to begin with, and change it if you aren’t happy with the result. A learning rate that’s too large can cause errors when calculating the loss, because the logarithms and exponentials generate huge (or tiny) numbers.
+
+> If you train the system for too long, you might find that its accuracy starts decreasing instead of increasing. That’s an effect of overfitting, the phenomenon we discussed in Training vs. Testing, on page 79. We’ll see how to avoid this problem in Part III of this book.
+
+> Finally, note that this is a binary classification problem—so you don’t necessarily need the additional complexities of multiclass classification, such as one-hot encoding. However, I ended up one-hot encoding the dataset anyway, so that I could run the same multiclass classifier that we used for MNIST. Alternatively, you can solve this challenge with the binary classifier from Chapter 5, A Discerning Machine, on page 63. In that case, you can use binary-encoded labels that are either 0 or 1, instead of one-hot-encoded labels that are either [1, 0] or [0, 1].
